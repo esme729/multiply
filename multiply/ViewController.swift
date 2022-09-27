@@ -44,11 +44,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var text1: UITextField!
     var text1String=""
+    var text1dubble=0.0
     
     
+    @IBOutlet weak var yoloLabel: UILabel!
     
     @IBOutlet weak var text2: UITextField!
  var text2String=""
+    var text2dubble=0.0
+    
+    var yolo=0.0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         text1.attributedPlaceholder=NSAttributedString(
@@ -62,11 +69,17 @@ class ViewController: UIViewController {
          text1String = text1.text ?? ""
         text2String=text2.text ?? ""
    
-  
+        text1dubble=Double(text1String) ?? 0.0
+        text2dubble=Double(text2String) ?? 0.0
+        
+    yolo=text1dubble*text2dubble
+        
+        yoloLabel.text="\(yolo)"
+ 
         
         
         
-
+        
         
     }
     
